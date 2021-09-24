@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Recipe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container-fluid d-flex flex-row justify-content-between align-items-center align-center">
+        <div class="h1 text-warning text-start my-5">Welcome {{user['first_name']}}</div>
+        <div class= "col-8 fs-4 mx-3 d-flex flex-row justify-content-end">
+            <a class="mx-3" href="/homepage">Dashboard</a>
+            <a class="mx-3" href="/logout">Logout</a>
+        </div>
+    </div>
+
+    
+    
+    <div class= "container-fluid justify-content-start">
+            <div class="text-secondary h1 mb-3 mx-4 px-2">{{recipe['name']}}</div>
+            <div class="container-md d-flex flex-column border border-dark border-2 mt-3">
+                <div class="d-flex flex-row justify-content-between align-items-center my-2">
+                    <div class="fs-3">
+                        Description
+                    </div>
+                    <div class="fs-4">
+                        {{recipe['description']}}
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row justify-content-between align-items-center my-2">
+                    <div class="fs-3">
+                        Under 30 minutes:
+                    </div>
+                    <div class="fs-4">
+                        {{recipe['under_30min']}}
+                    </div>
+                </div>
+
+
+                <div class="d-flex flex-row justify-content-between align-items-center my-2">
+                    <div class="fs-3">
+                        Instructions:
+                    </div>
+                    <div class="fs-4">
+                        {{recipe['instructions']}}
+                    </div>
+                </div>
+
+
+                <div class="d-flex flex-row justify-content-between align-items-center my-2">
+                    <div class="fs-3">
+                        Made on:
+                    </div>
+                    <div class="fs-4">
+                        {{recipe['made_on'].strftime("%B %d, %Y")}}
+                    </div>
+                </div>
+
+
+            </div>
+    
+   
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>
